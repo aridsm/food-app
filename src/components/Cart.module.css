@@ -1,0 +1,24 @@
+.carrinho {
+  position: absolute;
+  background: var(--bg);
+  border-radius: .2rem;
+  border: 1px solid var(--borda);
+  padding: 1.5rem;
+  right: 0;
+  top: calc(100% + 1rem);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.06);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header button {
+  color: var(--texto-2)
+}
+
+.listaCarrinho {
+  border: 1px solid red;
+  height: 10rem;
+}

@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux';
 import Modal from '../modal/Modal'
+import { cartActions } from '../store/cartStore';
 import classes from './ModalItemCardapio.module.css'
 
 const ModalItemCardapio = ({ item, onClose }) => {
 
   const [quantidadeItem, setQuantidadeItem] = useState(1);
+  const dispatch = useDispatch();
 
   const preco = item.preco * quantidadeItem
 
@@ -19,6 +22,16 @@ const ModalItemCardapio = ({ item, onClose }) => {
       if (prevState === 1) return prevState;
       return prevState - 1
     })
+  }
+
+  const addItemToCart = () => {
+    dispatch(cartActions.addItemToCart({
+      id: item.id,
+      preco: item.preco,
+      quantidade: quantidadeItem,
+      img: item.img,
+      nome: item.nome
+    }))
   }
 
   return (
@@ -48,7 +61,7 @@ const ModalItemCardapio = ({ item, onClose }) => {
                 R$ {String(preco.toFixed(2)).replace('.', ',')}
               </div>
             </span>
-            <button className='btn-style'>Adicionar ao carrinho</button>
+            <button className='btn-style' onClick={addItemToCart}>Adicionar ao carrinho</button>
           </div>
         </div>
       </div>

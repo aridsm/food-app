@@ -1,0 +1,41 @@
+.modalBackdrop {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(1px);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+}
+
+.modalContent {
+  background: var(--bg);
+  border-radius: .2rem;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+  position: fixed;
+  z-index: 11;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  max-width: 700px;
+  width: 100%
+}
+
+.buttonClose {
+  width: 40px;
+  height: 40px;
+  background: var(--sec);
+  border-radius: 50%;
+  border: 2px solid var(--texto-1);
+  position: fixed;
+  display: grid;
+  place-items: center;
+  top: 20px;
+  right: 20px;
+  z-index: 11;
+}
+
+.buttonClose svg {
+  fill: var(--texto-1);
+  width: 30px;
+  height: 30px
+}

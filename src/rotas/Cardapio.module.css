@@ -5,32 +5,39 @@
 .categorias {
   margin-top: 3rem;
 }
-.categorias > p {
+
+.categorias>p {
   color: var(--texto-2)
 }
+
 .listaCategorias {
   display: flex;
   align-items: center;
   margin-top: 1rem;
 }
 
-.listaCategorias li + li {
+
+.listaCategorias li+li {
   margin-left: .5rem;
 }
 
 .listaCategorias button {
   text-transform: capitalize;
   padding: .5rem .8rem;
-  border:1px solid transparent;
+  border: 1px solid transparent;
   border-radius: 20px;
   transition: .2s;
 }
 
 .listaCategorias button:hover {
-  border:1px solid var(--borda)
+  border: 1px solid var(--borda)
 }
 
-.listaCardapio{
+.listaCategorias button.btnAtivo {
+  border-color: var(--texto-2);
+}
+
+.listaCardapio {
   margin-top: 3rem;
   display: grid;
   grid-gap: 1.5rem;
@@ -41,8 +48,15 @@
   display: grid;
   grid-template-columns: 130px 1fr;
   grid-template-rows: 130px;
-  border:1px solid var(--borda);
+  border: 1px solid var(--borda);
   border-radius: .2rem;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.06);
+  transition: .2s;
+  cursor: pointer;
+}
+
+.itemCardapio:hover {
+  border-color: var(--texto-1);
 }
 
 .itemCardapio img {

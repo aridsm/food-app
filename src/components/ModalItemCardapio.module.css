@@ -1,0 +1,73 @@
+.modal {
+  display: flex;
+  border-radius: .2rem;
+  overflow: hidden;
+}
+
+.modal img {
+  display: block;
+}
+
+.infos {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.descricao {
+  margin: 1rem 0 2rem 0
+}
+
+.preco {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.preco>span {
+  margin-right: .3rem;
+  font-size: 1rem;
+}
+
+.qtdPreco {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.qtd {
+  display: flex;
+}
+
+.qtd button {
+  width: 30px;
+  height: 30px;
+  background: var(--texto-1);
+  color: var(--bg);
+  display: grid;
+  place-items: center;
+  border-radius: .2rem;
+  border: 2px solid transparent;
+  transition: .2s;
+  font-weight: bold;
+}
+
+.qtd button:hover {
+  background: var(--sec);
+  border-color: var(--texto-1);
+  color: var(--texto-1)
+}
+
+.qtd button+button {
+  margin-left: .3rem;
+}
+
+.totalContainer {
+  display: flex;
+  margin-top: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total {
+  font-weight: bold;
+}

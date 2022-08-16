@@ -1,13 +1,88 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+:root {
+  --texto-1: #312f2f;
+  --texto-2: rgba(72, 68, 61, 0.5);
+  --borda: rgba(72, 68, 61, 0.2);
+  --bg: #FDFDFA;
+  --sec: #F3B251
+}
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding:0
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input, button {
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  color: var(--texto-1);
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+}
+
+.container {
+  max-width: 1150px;
+  width: 100%;
+  padding-left:10px;
+  padding-right:10px;
+  margin: 0 auto
+}
+
+.btn-style {
+  padding: .6rem 1.1rem;
+  background: var(--texto-1);
+  border-radius: .2rem;
+  color: var(--bg);
+  font-size: .9rem;
+  transition: .2s;
+  border:2px solid transparent
+
+}
+
+.btn-style:hover {
+  background: var(--sec);
+  color: var(--texto-1);
+  border:2px solid var(--texto-1)
+}
+
+main {
+  min-height: calc(100vh - 6rem - 4rem); /*6rem do header; 4rem do footer*/
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: grid;
+  align-items: center;
+}
+h1 {
+  font-size: 3rem;
+}
+
+h1::after, h2::after {
+  content: '';
+  background: url('./assets/zig.svg');
+  background-size: 3rem;
+  width: 3rem;
+  height: .6rem;
+  position: relative;
+  display: block;
 }

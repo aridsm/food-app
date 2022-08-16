@@ -1,0 +1,80 @@
+.header {
+  height:6rem;
+  border-bottom: 1px solid var(--borda);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  height: 100%
+}
+
+.container > * {
+  flex: 1
+}
+
+.carrinho {
+  display: none;
+}
+
+.cart {
+  text-align: right;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.logo svg {
+  width: 20px;
+  height: 20px;
+  margin-bottom: -3px;
+  margin-right: .3rem;
+  fill: var(--texto-1)
+}
+.header nav a {
+  padding: .5rem;
+  border: 1px solid transparent;
+}
+
+.header nav a:hover {
+  color: var(--sec)
+}
+
+.header nav a + a {
+  margin-left: .8rem;
+}
+
+.header .linkAtivo {
+  border-bottom: 2px solid var(--sec)
+}
+
+.btnCarrinho {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.btnCarrinho svg {
+  width: 20px;
+  height: 20px;
+  margin-top: -3px;
+  margin-left: .5rem;
+}
+
+.itensCarrinho {
+  background: var(--sec);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--texto-1);
+  font-weight: bold;
+  border:2px solid var(--texto-1);
+  position: absolute;
+  top:-13px;
+  right: -13px
+}

@@ -1,0 +1,13 @@
+.linkCardapio {
+  margin-top: 2rem;
+}
+
+.descricao {
+  margin-top: .5rem;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

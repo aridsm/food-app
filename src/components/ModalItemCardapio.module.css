@@ -12,6 +12,7 @@
   padding: 2rem;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .descricao {
@@ -32,6 +33,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.totalContainer {
+  display: flex;
+  margin-top: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total {
+  font-weight: bold;
 }
 
 .qtd {
@@ -59,15 +71,4 @@
 
 .qtd button+button {
   margin-left: .3rem;
-}
-
-.totalContainer {
-  display: flex;
-  margin-top: auto;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.total {
-  font-weight: bold;
 }

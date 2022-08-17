@@ -15,7 +15,7 @@ const Header = () => {
       <div className={`container ${classes.container}`}>
         <nav>
           <NavLink to='/' end className={classIsActive}>Home</NavLink>
-          <NavLink to='/cardapio' className={classIsActive}>Cardapio</NavLink>
+          <NavLink to='/cardapio' className={classIsActive}>Cardápio</NavLink>
         </nav>
         <div className={classes.logo}>
           <IconLogo />  FoodApp

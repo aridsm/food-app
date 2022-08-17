@@ -1,0 +1,64 @@
+.itemCarrinho {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  grid-template-rows: 55px 55px;
+}
+
+.itemCarrinho+.itemCarrinho {
+  border-top: 1px solid var(--borda);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.itemCarrinho img {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  width: 100%;
+  height: 100%
+}
+
+.header {
+  padding: 0 .5rem 0 1rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.tituloEPreco {
+  text-align: left;
+  margin-right: 2rem;
+}
+
+.titulo {
+  font-weight: bold;
+  max-width: 7rem;
+  line-height: 100%;
+}
+
+.unidade {
+  font-size: .8rem;
+  margin-top: .4rem;
+}
+
+.btnsEQtd {
+  align-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 .5rem 0 1rem;
+}
+
+.valor {
+  font-weight: bold;
+}
+
+.btn button {
+  width: 30px;
+  height: 30px;
+  background: var(--texto-1);
+  color: var(--bg);
+  border-radius: .2rem;
+}
+
+.btn button:nth-of-type(1) {
+  margin-right: .2rem;
+}

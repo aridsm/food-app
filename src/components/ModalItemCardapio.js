@@ -9,7 +9,7 @@ const ModalItemCardapio = ({ item, onClose }) => {
   const [quantidadeItem, setQuantidadeItem] = useState(1);
   const dispatch = useDispatch();
 
-  const preco = item.preco * quantidadeItem
+  const preco = item.preco * quantidadeItem;
 
   const aumentarQuantidade = () => {
     setQuantidadeItem(prevState => {
@@ -23,6 +23,7 @@ const ModalItemCardapio = ({ item, onClose }) => {
       return prevState - 1
     })
   }
+
 
   const addItemToCart = () => {
     dispatch(cartActions.addItemToCart({

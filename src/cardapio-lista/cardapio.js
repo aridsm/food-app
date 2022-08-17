@@ -1,49 +1,77 @@
 const cardapio = {
   pizza: [
     {
-      nome: 'Pizza',
-      descricao: 'Massa fina e crocante feita no forno a lenha.',
-      preco: '37.49',
+      nome: 'Pizza pepperoni',
+      descricao: 'Pepperoni, molho de tomate e queijo.',
+      preco: '25.49',
       img: 'pizza1.webp',
       id: 'piz1'
+    },
+    {
+      nome: 'Pizza de frango',
+      descricao: 'Frango, azeitona, molho de tomate, queijo e ervilha.',
+      preco: '28.99',
+      img: 'pizza2.webp',
+      id: 'piz2'
+    },
+    {
+      nome: 'Pizza mista',
+      descricao: 'Calabresa, presunto, pickles, azeitona, queijo, cogumelo e molho de tomate.',
+      preco: '33,20',
+      img: 'pizza3.webp',
+      id: 'piz3'
+    },
+    {
+      nome: 'Pizza portuguesa',
+      descricao: 'Ovo, presunto, azeitona, pickles, cebola e molho de tomate.',
+      preco: '30,49',
+      img: 'pizza4.webp',
+      id: 'piz4'
     }
   ],
   hambúrguer: [
     {
       nome: 'Dupla carne',
-      descricao: 'Alface, queijo, dupla camada de carne, cebola caramelizada, pao, tomate e molho especial.',
+      descricao: 'Alface, queijo, dupla camada de carne, cebola caramelizada, pão, tomate e molho especial.',
       preco: '35.99',
       img: 'burg1.webp',
       id: 'bur1'
     },
     {
       nome: 'Hambúrguer classico',
-      descricao: 'Alface, queijo mussarela, carne, cebola em rodelas, pao, pickles, tomate e ketchup.',
+      descricao: 'Alface, queijo mussarela, carne, cebola em rodelas, pão, pickles, tomate e ketchup.',
       preco: '28.40',
       img: 'burg2.webp',
       id: 'bur2'
     },
     {
       nome: 'Chicken Burger',
-      descricao: 'Queijo cheddar, frango empanado, cebola roxa, pao e maionese especial.',
+      descricao: 'Queijo cheddar, frango empanado, cebola roxa, pão e maionese especial.',
       preco: '26.99',
       img: 'burg3.webp',
       id: 'bur3'
     },
     {
       nome: '3 Sabores',
-      descricao: 'Alface, queijo mussarela, dupla camada de carne, calabresa, pao, bacon e ketchup.',
+      descricao: 'Alface, queijo mussarela, dupla camada de carne, calabresa, pão, bacon e ketchup.',
       preco: '42.80',
       img: 'burg4.webp',
       id: 'bur4'
     },
     {
       nome: 'Vegano',
-      descricao: 'Alface, tomate, hambúrguer de grao de bico, pao e maionese vegana.',
+      descricao: 'Alface, tomate, hambúrguer de grão de bico, pão e maionese vegana.',
       preco: '27.99',
       img: 'burg5.webp',
-      id: 'bur4'
+      id: 'bur5'
     },
+    {
+      nome: 'Sanduíche de presunto',
+      descricao: 'Alface, tomate, presunto, queijo, pão e maionese.',
+      preco: '12.29',
+      img: 'burg6.webp',
+      id: 'bur6'
+    }
   ],
   outros: [
     {
@@ -54,22 +82,22 @@ const cardapio = {
       id: 'out1'
     },
     {
-      nome: 'Aneis de cebola',
-      descricao: 'Cebola em rodelas empanadas e frita. Acompanha molho.',
+      nome: 'Anéis de cebola',
+      descricao: 'Cebola em rodelas empanadas e fritas. Acompanha molho.',
       preco: '22.30',
       img: 'out2.webp',
       id: 'out2'
     },
     {
       nome: 'Cachorro quente',
-      descricao: 'Salsicha, pao, romate, coentro, maionese, ketchup e mostarda.',
+      descricao: 'Salsicha, pão, romate, coentro, maionese, ketchup e mostarda.',
       preco: '20.49',
       img: 'out3.webp',
       id: 'out3'
     },
     {
       nome: 'Batata frita',
-      descricao: 'Porçao pequena de batata frita. Acompanha ketchup.',
+      descricao: 'Porção pequena de batata frita. Acompanha ketchup.',
       preco: '13.30',
       img: 'out4.webp',
       id: 'out4'
@@ -77,8 +105,8 @@ const cardapio = {
   ],
   bebidas: [
     {
-      nome: 'Agua mineral',
-      descricao: 'Garrafa de agua mineral de 500ml.',
+      nome: 'Água mineral',
+      descricao: 'Garrafa de água mineral de 500ml.',
       preco: '2.50',
       img: 'beb1.webp',
       id: 'beb1'
@@ -98,8 +126,8 @@ const cardapio = {
       id: 'beb3'
     },
     {
-      nome: 'Jarritos Limao',
-      descricao: 'Refrigerante sabor Limao de 370ml.',
+      nome: 'Jarritos Limão',
+      descricao: 'Refrigerante sabor Limão de 370ml.',
       preco: '5.59',
       img: 'beb4.webp',
       id: 'beb4'

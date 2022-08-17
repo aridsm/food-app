@@ -52,7 +52,7 @@ body {
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
-  margin: 0 auto
+  margin: 0 auto;
 }
 
 .btn-style {
@@ -76,6 +76,7 @@ main {
   /*6rem do header; 4rem do footer*/
   padding-top: 3rem;
   padding-bottom: 3rem;
+  background: url('./assets/stripe.svg');
 }
 
 h1 {

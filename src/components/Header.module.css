@@ -1,6 +1,11 @@
 .header {
   height: 6rem;
   border-bottom: 1px solid var(--borda);
+  position: fixed;
+  background: var(--bg);
+  width: 100%;
+  z-index: 99;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.05);
 }
 
 .container {
@@ -54,6 +59,13 @@
   display: flex;
   align-items: center;
   margin-left: auto;
+}
+
+.btnCarrinho.btnAtivo {
+  box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--sec);
+  background: var(--sec);
+  color: var(--texto-1);
+  border: 2px solid var(--texto-1)
 }
 
 .btnCarrinho svg {

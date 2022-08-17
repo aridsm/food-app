@@ -6,6 +6,16 @@
   right: 0;
   top: calc(100% + 1rem);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.06);
+  z-index: -1;
+  opacity: 0;
+  transition: .3s;
+  transform: translate3d(1rem, 0, 0);
+}
+
+.carrinho.shown {
+  z-index: 1;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
 
 .header {
@@ -21,10 +31,11 @@
 }
 
 .listaCarrinho {
-  max-height: 15rem;
+  max-height: 20rem;
   overflow: auto;
-  padding: 1rem
+  padding: 1rem;
 }
+
 
 .finalizar {
   display: flex;

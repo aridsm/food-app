@@ -3,8 +3,8 @@
 :root {
   --texto-1: #312f2f;
   --texto-2: rgba(72, 68, 61, 0.5);
-  --borda: rgba(72, 68, 61, 0.2);
-  --bg: #fafaf3;
+  --borda: rgba(146, 137, 122, 0.2);
+  --bg: #faf8ed;
   --sec: #F3B251
 }
 
@@ -15,7 +15,8 @@
 }
 
 input,
-button {
+button,
+textarea {
   padding: 0;
   background: none;
   border: none;
@@ -72,11 +73,12 @@ body {
 }
 
 main {
-  min-height: calc(100vh - 6rem - 4rem);
-  /*6rem do header; 4rem do footer*/
-  padding-top: 3rem;
+  min-height: calc(100vh - 4rem);
+  /*4rem do footer*/
+  padding-top: 9rem;
   padding-bottom: 3rem;
   background: url('./assets/stripe.svg');
+
 }
 
 h1 {

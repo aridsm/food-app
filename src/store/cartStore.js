@@ -35,6 +35,11 @@ const cartSlice = createSlice({
         state.itens = state.itens.filter(item => item.id !== id)
       }
 
+    },
+    removeAll(state) {
+      state.itens = [];
+      state.totalItens = 0;
+      state.valorTotal = 0
     }
   }
 })

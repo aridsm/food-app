@@ -1,14 +1,28 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { cartActions } from '../store/cartStore';
 import classes from './Cart.module.css';
 import ItemCart from './ItemCart';
 
-const Cart = ({ itensNoCarrinho }) => {
+const Cart = ({ itensNoCarrinho, closeCart, isCartShown }) => {
 
 
   const valorTotal = useSelector(state => state.cart.valorTotal);
+  const dispatch = useDispatch()
 
-  const fixValorTotal = Math.abs(valorTotal).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
+  const fixValorTotal = Math.abs(valorTotal).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+
+  const navigate = useNavigate();
+
+  const finalizarCompra = () => {
+    closeCart();
+    navigate('/finalizar-compra')
+  }
+
+  const removerTudo = () => {
+    dispatch(cartActions.removeAll())
+  }
 
   let carrinhoContent = <>
     <ul className={classes.listaCarrinho}>
@@ -21,7 +35,7 @@ const Cart = ({ itensNoCarrinho }) => {
       <span className={classes.total}>
         Total: <br /><span>{fixValorTotal}</span>
       </span>
-      <button className='btn-style'>Finalizar compra</button>
+      <button className='btn-style' onClick={finalizarCompra}>Finalizar compra</button>
     </div>
   </>
 
@@ -30,14 +44,13 @@ const Cart = ({ itensNoCarrinho }) => {
   }
 
   return (
-    <section className={classes.carrinho}>
+    <section className={`${classes.carrinho} ${isCartShown ? classes.shown : ''}`}>
       <div className={classes.header}>
         <p>Seu carrinho</p>
-        {itensNoCarrinho.length ? <button>Esvaziar</button> : ''}
+        {itensNoCarrinho.length ? <button onClick={removerTudo}>Esvaziar</button> : ''}
       </div>
 
       {carrinhoContent}
-
 
     </section>
   )

@@ -17,14 +17,14 @@ const cardapio = {
     {
       nome: 'Pizza mista',
       descricao: 'Calabresa, presunto, pickles, azeitona, queijo, cogumelo e molho de tomate.',
-      preco: '33,20',
+      preco: '33.20',
       img: 'pizza3.webp',
       id: 'piz3'
     },
     {
       nome: 'Pizza portuguesa',
       descricao: 'Ovo, presunto, azeitona, pickles, cebola e molho de tomate.',
-      preco: '30,49',
+      preco: '30.49',
       img: 'pizza4.webp',
       id: 'piz4'
     }

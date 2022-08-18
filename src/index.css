@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 :root {
-  --texto-1: #312f2f;
+  --texto-1: #3b3938;
   --texto-2: rgba(72, 68, 61, 0.5);
   --borda: rgba(146, 137, 122, 0.2);
   --bg: #faf8ed;
-  --sec: #F3B251
+  --sec: #f3b251;
 }
 
 * {
@@ -51,8 +51,8 @@ body {
 .container {
   max-width: 1150px;
   width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0 auto;
 }
 
@@ -78,7 +78,6 @@ main {
   padding-top: 9rem;
   padding-bottom: 3rem;
   background: url('./assets/stripe.svg');
-
 }
 
 h1 {

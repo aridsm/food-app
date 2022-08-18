@@ -66,6 +66,11 @@
   cursor: not-allowed;
 }
 
+.btnCarrinho:disabled:hover {
+  border-color: transparent;
+  color: var(--bg)
+}
+
 .btnCarrinho.btnAtivo {
   box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--sec);
   background: var(--sec);
@@ -91,6 +96,6 @@
   font-weight: bold;
   border: 2px solid var(--texto-1);
   position: absolute;
-  top: -13px;
-  right: -13px
+  top: -12px;
+  right: -10px
 }

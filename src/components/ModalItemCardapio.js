@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import Modal from '../modal/Modal'
+import { alertAction, alertVisibility } from '../store/alertStore';
 import { cartActions } from '../store/cartStore';
 import classes from './ModalItemCardapio.module.css'
 
@@ -33,6 +34,7 @@ const ModalItemCardapio = ({ item, onClose }) => {
       img: item.img,
       nome: item.nome
     }))
+    dispatch(alertVisibility('Item adicionado ao carrinho.', 'ok'))
   }
 
   return (

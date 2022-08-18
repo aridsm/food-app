@@ -1,0 +1,32 @@
+.alerta {
+  position: fixed;
+  width: 250px;
+  padding: 1rem 2rem;
+  z-index: 103;
+  text-align: center;
+  color: var(--bg);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.06);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  top: 20%;
+  left: 0;
+  animation: animaAlerta .3s ease forwards;
+  transform: translate3d(-100%, 0, 0);
+  opacity: 0;
+
+}
+
+@keyframes animaAlerta {
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.alerta.ok {
+  background: rgb(41, 155, 102);
+}
+
+.alerta.bad {
+  background: rgb(209, 72, 54);
+}

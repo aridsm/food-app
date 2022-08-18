@@ -2,6 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux';
 import classes from './ItemCart.module.css';
 import { cartActions } from '../store/cartStore'
+import { alertVisibility } from '../store/alertStore';
 
 const ItemCart = ({ item }) => {
 
@@ -9,11 +10,13 @@ const ItemCart = ({ item }) => {
   const fixedPrecoItem = (valor) => Number(valor).toFixed(2).replace('.', ',');
 
   const aumentarQuantidade = () => {
-    dispatch(cartActions.addOneItemToCart(item.id))
+    dispatch(cartActions.addOneItemToCart(item.id));
+    dispatch(alertVisibility(`Adicionada 1 unidade de ${item.nome}`, 'ok'));
   }
 
   const diminuirQuantidade = () => {
     dispatch(cartActions.removeOneItemToCart(item.id))
+    dispatch(alertVisibility(`Removida 1 unidade de "${item.nome}"`, 'bad'))
   }
 
   const dispatch = useDispatch();

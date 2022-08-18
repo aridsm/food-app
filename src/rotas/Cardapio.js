@@ -49,7 +49,7 @@ const Cardapio = () => {
 
         <ul className={classes.listaCardapio}>
           {cardapioFiltrado.map(prato =>
-            <li key={prato.id} className={classes.itemCardapio} onClick={() => displayModal(prato)}>
+            <li key={prato.id} className={classes.itemCardapio} onClick={() => displayModal(prato)} tabIndex='0'>
               <img src={require(`../assets/${prato.img}`)} alt={prato.nome} />
               <div className={classes.info}>
                 <p className={classes.nome}>{prato.nome}</p>

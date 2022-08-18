@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { alertVisibility } from '../store/alertStore';
 import { cartActions } from '../store/cartStore';
 import classes from './Cart.module.css';
 import ItemCart from './ItemCart';
@@ -21,7 +22,8 @@ const Cart = ({ itensNoCarrinho, closeCart, isCartShown }) => {
   }
 
   const removerTudo = () => {
-    dispatch(cartActions.removeAll())
+    dispatch(cartActions.removeAll());
+    dispatch(alertVisibility('A lista foi esvaziada.', 'bad'));
   }
 
   let carrinhoContent = <>

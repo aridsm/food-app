@@ -15,8 +15,8 @@
   align-items: center;
   margin-top: 1rem;
   overflow: auto;
+  width: calc(100vw - 40px);
 }
-
 
 .listaCategorias li+li {
   margin-left: .5rem;

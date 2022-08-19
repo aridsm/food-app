@@ -5,6 +5,8 @@ import classes from './Alert.module.css'
 const Alert = () => {
 
   const alert = useSelector(state => state.alert);
+  const alertIsShown = useSelector(state => state.alert.alertIsShown)
+
   let classStatus = ''
 
   if (alert.type === 'ok') {
@@ -15,8 +17,10 @@ const Alert = () => {
     classStatus = classes.bad
   }
 
+  const styles = `${alertIsShown ? classes.alertShown : ''} ${classStatus} ${classes.alerta}`
+
   return (
-    <div className={`${classes.alerta} ${classStatus}`}>
+    <div className={styles}>
       {alert.message}
     </div>
   )

@@ -4,7 +4,7 @@ import SeuPedido from '../components/SeuPedido';
 import classes from './Finalizar.module.css';
 
 
-const Finalizar = () => {
+const Finalizar = ({ finalizarCompra }) => {
 
   return (
     <div className={classes.finalizar}>
@@ -12,7 +12,7 @@ const Finalizar = () => {
         <h1>Para onde enviar?</h1>
         <section>
           <p className={classes.cidade}>Cidade: Rio de Janeiro</p>
-          <FormAddress />
+          <FormAddress finalizarCompra={finalizarCompra} />
         </section>
       </div>
       <SeuPedido />

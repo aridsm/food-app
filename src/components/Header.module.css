@@ -139,7 +139,6 @@
   .header nav {
     position: absolute;
     background: var(--bg);
-    display: none;
     flex-direction: column;
     text-align: center;
     padding: 1rem;
@@ -148,10 +147,18 @@
     top: 4.5rem;
     right: 55px;
     border-radius: .2rem;
+    display: flex;
+    visibility: hidden;
+    transition: .3s;
+    transform: translate3d(1rem, 0, 0);
+    opacity: 0;
   }
 
   .header nav.shown {
     display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
   }
 
   .header nav a+a {

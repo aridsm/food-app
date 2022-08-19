@@ -8,7 +8,7 @@ const PedidoFinalizado = () => {
 
   const location = useLocation();
   const nome = location.state.nome;
-  const itensCart = location.state.itensCart;
+  const cartState = location.state.cartState;
   const dispatch = useDispatch();
 
   const fixValor = (valor) => Math.abs(valor).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
@@ -22,15 +22,15 @@ const PedidoFinalizado = () => {
       <h1>Olá, {nome}! Sua compra foi finalizada!</h1>
       <p className={classes.seuPedido}>Seu pedido:</p>
       <ul className={classes.listaPedidos}>
-        {itensCart.map(item =>
+        {cartState.itens.map(item =>
           <li key={item.nome}>
             <p className={classes.itemNome}>{item.nome}</p>
             <div>{item.quantidade} x {fixValor(item.preco)}</div>
             <div className={classes.total}>Total: {fixValor(item.quantidade * item.preco)}</div>
           </li>)}
       </ul>
-      <div>
-        Valor total da compra:
+      <div className={classes.totalPedido}>
+        Valor total da compra: <span>{fixValor(cartState.valorTotal)}</span>
       </div>
       <p className={classes.agradecer}>Agradecemos por comprar conosco!</p>
     </div>

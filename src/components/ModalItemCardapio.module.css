@@ -4,11 +4,19 @@
   overflow: hidden;
 }
 
-.modal img {
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
+.modal .img {
+  flex: 1
+}
+
 .infos {
+  flex: 1;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -33,6 +41,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1.5rem;
 }
 
 .totalContainer {
@@ -40,6 +49,10 @@
   margin-top: auto;
   justify-content: space-between;
   align-items: center;
+}
+
+.totalContainer button {
+  margin-left: 1rem;
 }
 
 .total {
@@ -73,22 +86,17 @@
   margin-left: .3rem;
 }
 
+
 @media (max-width: 690px) {
   .modal {
     flex-direction: column;
   }
 
-  .totalContainer {
-    margin-top: 1.5rem;
-  }
-
-  .modal .img {
+  .img img {
     height: 200px;
   }
 
-  .img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .infos {
+    padding: 1.2rem;
   }
 }

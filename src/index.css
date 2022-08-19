@@ -78,6 +78,7 @@ main {
   padding-top: 7.5rem;
   padding-bottom: 3rem;
   position: relative;
+  display: grid;
 }
 
 h1 {
@@ -93,4 +94,14 @@ h2::after {
   height: .6rem;
   position: relative;
   display: block;
+}
+
+@media (max-width: 450px) {
+  body {
+    font-size: 14px;
+  }
+
+  .btn-style {
+    padding: .5rem 1rem;
+  }
 }

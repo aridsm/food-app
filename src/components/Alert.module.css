@@ -10,16 +10,16 @@
   border-bottom-right-radius: 5px;
   top: 20%;
   left: 0;
-  animation: animaAlerta .3s ease forwards;
-  transform: translate3d(-100%, 0, 0);
+  visibility: hidden;
   opacity: 0;
+  transition: .3s;
+  transform: translateX(-4rem);
 }
 
-@keyframes animaAlerta {
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
+.alertShown {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .alerta.ok {

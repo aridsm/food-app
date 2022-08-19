@@ -8,21 +8,28 @@ import Footer from "./components/Footer";
 import Finalizar from "./rotas/Finalizar";
 import { useSelector } from "react-redux";
 import PedidoFinalizado from "./rotas/PedidoFinalizado";
+import { useState } from "react";
 
 function App() {
 
   const itensCarrinho = useSelector(state => state.cart.itens)
-  const alertIsShown = useSelector(state => state.alert.alertIsShown)
+
+  const [compraFoiFinalizada, setCompraFoiFinalizada] = useState(false)
+
+  const finalizarCompra = () => {
+    setCompraFoiFinalizada(true)
+  }
+
   return (
     <BrowserRouter>
-      {alertIsShown && <Alert />}
+      <Alert />
       <Header />
       <main className="container">
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/cardapio' element={<Cardapio />} />
-          {itensCarrinho.length && <Route path='/finalizar-compra' element={<Finalizar />} />}
-          <Route path='/finalizado' element={<PedidoFinalizado />} />
+          {itensCarrinho.length && <Route path='/finalizar-compra' element={<Finalizar finalizarCompra={finalizarCompra} />} />}
+          {compraFoiFinalizada && <Route path='/finalizado' element={<PedidoFinalizado />} />}
           <Route path='*' element={<NotFound />} />
         </Routes>
       </main>

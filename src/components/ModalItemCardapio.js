@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import Modal from '../modal/Modal'
-import { alertAction, alertVisibility } from '../store/alertStore';
+import { alertVisibility } from '../store/alertStore';
 import { cartActions } from '../store/cartStore';
 import classes from './ModalItemCardapio.module.css'
 

@@ -2,7 +2,6 @@ import React, { useEffect, useReducer } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { alertVisibility } from '../store/alertStore'
-import { cartActions } from '../store/cartStore'
 import classes from './FormAddress.module.css'
 
 const validateCpf = (cpf) => {
@@ -99,7 +98,9 @@ const formReducer = (state, action) => {
       return input;
     })
 
-    return { ...initialState, inputFields: newInputField }
+    const formValidity = newInputField.every(input => input.isValid);
+
+    return { formIsValid: formValidity, inputFields: newInputField }
   }
 
   if (action.type === 'SEND_ERROR') {
@@ -114,7 +115,8 @@ const formReducer = (state, action) => {
       return input;
     })
 
-    return { ...initialState, inputFields: newInputField }
+    const formValidity = newInputField.every(input => input.isValid);
+    return { formIsValid: formValidity, inputFields: newInputField }
   }
 
   if (action.type === 'UPDATE_ADDRESS_DATA') {
@@ -124,22 +126,22 @@ const formReducer = (state, action) => {
     const newBairroValue = { ...bairroInput, value: action.bairro };
     const newRuaValue = { ...ruaInput, value: action.rua };
 
-    const newInputField = state.inputFields.map(input => {
-      let newInput = input;
+    const newInputField = [...state.inputFields].map(input => {
       if (input.nome === 'bairro') {
-        newInput = newBairroValue;
-        newInput.isValid = true
+        input = newBairroValue;
+        input.isValid = true;
+        input.blur = true
 
       }
       if (input.nome === 'rua') {
-        newInput = newRuaValue;
-        newInput.isValid = true
-
+        input = newRuaValue;
+        input.isValid = true
+        input.blur = true
       }
       if (input.nome === 'cep') {
-        newInput.isValid = true
+        input.isValid = true
       }
-      return newInput;
+      return input;
     })
 
     return { ...initialState, inputFields: newInputField }
@@ -147,25 +149,24 @@ const formReducer = (state, action) => {
   }
 
   if (action.type === 'SUBMIT') {
-    const formValidity = state.inputFields.every(input => input.isValid);
 
     const newInputField = state.inputFields.map(input => {
       input.blur = true;
       return input;
     })
 
-    return { formIsValid: formValidity, inputFields: newInputField }
+    return { ...initialState, inputFields: newInputField }
 
   }
 
   return initialState
 }
 
-const FormAddress = () => {
+const FormAddress = ({ finalizarCompra }) => {
   const [formState, dispatchForm] = useReducer(formReducer, initialState);
   const dispatch = useDispatch()
 
-  const itensCart = useSelector(state => state.cart.itens)
+  const cartState = useSelector(state => state.cart)
 
   const CEP = formState.inputFields.find(input => input.nome === 'cep');
   const nome = formState.inputFields.find(input => input.nome === 'nome').value;
@@ -182,11 +183,11 @@ const FormAddress = () => {
         await fetch(`https://brasilapi.com.br/api/cep/v1/${CEP.value}`)
           .then(r => r.json())
           .then(enderecoData => {
-
             if (enderecoData.city !== 'Rio de Janeiro') {
               error = 'Este cep nao faz parte da cidade Rio de Janeiro'
               return;
             }
+
             dispatchForm({ type: 'UPDATE_ADDRESS_DATA', bairro: enderecoData.neighborhood, rua: enderecoData.street })
           })
           .catch(err => {
@@ -211,11 +212,13 @@ const FormAddress = () => {
     e.preventDefault();
     dispatchForm({ type: 'SUBMIT' })
     if (formState.formIsValid) {
-      navigate('/finalizado', { state: { nome, itensCart } })
+      finalizarCompra()
+      navigate('/finalizado', { state: { nome, cartState } })
     } else {
       dispatch(alertVisibility('Por favor, preencha seus dados corretamente.', 'bad'))
     }
   }
+
 
   return (
     <form onSubmit={submitForm} className={classes.form}>

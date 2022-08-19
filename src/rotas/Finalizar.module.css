@@ -13,3 +13,9 @@
 .formField {
   flex: 2
 }
+
+@media (max-width: 850px) {
+  .finalizar {
+    flex-direction: column;
+  }
+}

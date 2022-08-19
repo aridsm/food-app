@@ -6,3 +6,12 @@
   justify-content: center;
   border-top: 1px solid var(--borda);
 }
+
+.footer a {
+  margin-left: .2rem;
+  transition: .2s;
+}
+
+.footer a:hover {
+  color: var(--texto-2)
+}

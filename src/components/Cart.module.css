@@ -10,6 +10,7 @@
   transition: .3s;
   transform: translate3d(1rem, 0, 0);
   opacity: 0;
+  min-width: 250px;
 }
 
 .carrinho.shown {
@@ -59,4 +60,10 @@
   margin: 1.5rem 0;
   text-align: center;
   padding: 1rem
+}
+
+@media (max-width: 450px) {
+  .carrinho {
+    width: calc(100vw - 30px);
+  }
 }

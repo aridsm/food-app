@@ -23,7 +23,9 @@ const ItemCart = ({ item }) => {
 
   return (
     <li key={item.id} className={classes.itemCarrinho}>
-      <img src={require(`../assets/${item.img}`)} alt={item.nome} />
+      <div className={classes.img}>
+        <img src={require(`../assets/${item.img}`)} alt={item.nome} />
+      </div>
       <div className={classes.header}>
         <div className={classes.tituloEPreco}>
           <p className={classes.titulo}>{item.nome}</p>

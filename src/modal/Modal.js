@@ -12,11 +12,13 @@ const Backdrop = ({ onClose }) => {
 const ModalContent = ({ children, onClose }) => {
   return (
     <>
-      <button className={classes.buttonClose} onClick={onClose}>
-        <IconClose />
-      </button>
-      <div className={classes.modalContent}>
-        {children}
+      <div className={classes.modal}>
+        <button className={classes.buttonClose} onClick={onClose}>
+          <IconClose />
+        </button>
+        <div className={classes.modalContent}>
+          {children}
+        </div>
       </div>
     </>
   )

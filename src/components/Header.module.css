@@ -27,7 +27,8 @@
 .logo {
   font-weight: bold;
   font-size: 1.2rem;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .logo svg {
@@ -99,4 +100,82 @@
   position: absolute;
   top: -12px;
   right: -10px
+}
+
+.menuBtn {
+  display: none;
+}
+
+@media (max-width: 550px) {
+  .menuBtn {
+    display: block;
+    min-width: calc(40px - 4px);
+    min-height: calc(40px - 4px);
+    margin-left: auto;
+    margin-right: 1rem;
+    border-radius: .2rem;
+    transition: .2s;
+  }
+
+  .menuBtn.shown {
+    box-shadow: 0 0 0 2px var(--texto-1);
+
+  }
+
+  .menuBtn svg {
+    width: 30px;
+    height: 30px;
+    margin-top: 3px;
+  }
+
+  .container {
+    justify-content: space-between;
+  }
+
+  .container>* {
+    flex: 0
+  }
+
+  .header nav {
+    position: absolute;
+    background: var(--bg);
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid var(--borda);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.06);
+    top: 4.5rem;
+    right: 55px;
+    border-radius: .2rem;
+  }
+
+  .header nav.shown {
+    display: flex;
+  }
+
+  .header nav a+a {
+    margin-left: 0;
+  }
+
+  .header .linkAtivo {
+    border-bottom: none;
+    color: var(--sec)
+  }
+
+  .btnCarrinho span:nth-of-type(1) {
+    display: none;
+  }
+
+  .btnCarrinho {
+    width: 40px;
+    height: 40px;
+    padding: .5rem
+  }
+
+  .btnCarrinho svg {
+    margin-left: 0;
+    width: 25px;
+    height: 25px;
+  }
 }

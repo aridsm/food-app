@@ -25,7 +25,6 @@ const ModalItemCardapio = ({ item, onClose }) => {
     })
   }
 
-
   const addItemToCart = () => {
     dispatch(cartActions.addItemToCart({
       id: item.id,
@@ -40,7 +39,7 @@ const ModalItemCardapio = ({ item, onClose }) => {
   return (
     <Modal onClose={onClose}>
       <div className={classes.modal}>
-        <div>
+        <div className={classes.img}>
           <img src={require(`../assets/${item.img}`)} alt={item.nome} />
         </div>
         <div className={classes.infos}>

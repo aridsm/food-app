@@ -12,7 +12,7 @@ const Home = () => {
 
         <a href='/cardapio' className={`btn-style ${classes.linkCardapio}`}>Conheça o Cardápio</a>
       </div>
-      <div>
+      <div className={classes.img}>
         <img src={imgHome} alt='visao de cima de uma bandeja com duas porçoes de batata frita e um hamburger' />
       </div>
     </div>

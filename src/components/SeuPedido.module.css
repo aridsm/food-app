@@ -8,6 +8,10 @@
   background: var(--bg);
 }
 
+.seuPedido h2 {
+  font-size: 2rem;
+}
+
 .seuPedido ul {
   margin-top: 2rem;
 }
@@ -63,4 +67,39 @@
 .valor {
   font-size: 1.2rem;
   font-weight: bold;
+}
+
+
+@media (max-width: 850px) {
+  .finalizar {
+    flex-direction: column;
+  }
+
+  .seuPedido ul {
+    display: flex;
+    overflow: auto;
+    padding-bottom: 1.5rem
+  }
+
+  .itemPedido {
+    min-width: 300px
+  }
+
+  .itemPedido+.itemPedido {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+    margin-left: 1.5rem;
+    padding-left: 1.5rem;
+    border-left: 1px solid var(--borda)
+  }
+
+  .seuPedido {
+    border-left: none;
+    border-right: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 5rem;
+  }
+
 }

@@ -75,9 +75,9 @@ body {
 main {
   min-height: calc(100vh - 4rem);
   /*4rem do footer*/
-  padding-top: 9rem;
+  padding-top: 7.5rem;
   padding-bottom: 3rem;
-  background: url('./assets/stripe.svg');
+  position: relative;
 }
 
 h1 {

@@ -1,0 +1,66 @@
+.seuPedido {
+  flex: 1;
+  border-left: 1px solid var(--borda);
+  border-right: 1px solid var(--borda);
+  margin: -3rem 0;
+  padding: 3rem;
+  width: 100%;
+  background: var(--bg);
+}
+
+.seuPedido ul {
+  margin-top: 2rem;
+}
+
+.itemPedido {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  grid-gap: 1rem;
+}
+
+.itemPedido+.itemPedido {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--borda);
+}
+
+.itemPedido img {
+  grid-column: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.infos {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.nome {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.total {
+  margin-top: auto;
+  margin-left: auto;
+}
+
+.total span {
+  font-weight: bold;
+}
+
+.valorTotal {
+  border-top: 1px solid var(--borda);
+  border-bottom: 1px solid var(--borda);
+  padding: 1.5rem 0;
+  margin-top: 1.5rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.valor {
+  font-size: 1.2rem;
+  font-weight: bold;
+}

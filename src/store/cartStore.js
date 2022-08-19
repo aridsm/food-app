@@ -8,7 +8,7 @@ const cartSlice = createSlice({
 
       const itemJaExisteNaLista = state.itens.find(item => item.id === action.payload.id);
       state.totalItens += action.payload.quantidade;
-      state.valorTotal += Number(action.payload.preco);
+      state.valorTotal += Number(action.payload.preco) * action.payload.quantidade;
 
       if (itemJaExisteNaLista) {
         itemJaExisteNaLista.quantidade += action.payload.quantidade;

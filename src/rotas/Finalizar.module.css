@@ -6,70 +6,10 @@
   margin: 1rem 0 3rem 0;
 }
 
-.errorMessage {
-  margin-top: .5rem;
-  color: rgb(201, 49, 49)
-}
-
 .finalizar {
   display: flex;
 }
 
 .formField {
   flex: 2
-}
-
-.formField button {
-  margin-top: 2rem;
-}
-
-.seuPedido {
-  flex: 1;
-  border-left: 1px solid var(--borda);
-  border-right: 1px solid var(--borda);
-  margin: -3rem 0;
-  padding: 3rem;
-  width: 100%;
-}
-
-.seuPedido ul {
-  margin-top: 2rem;
-}
-
-.itemPedido {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  grid-gap: 1rem;
-}
-
-.itemPedido+.itemPedido {
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--borda);
-}
-
-.itemPedido img {
-  grid-column: 1;
-  width: 100%;
-  height: 100%;
-}
-
-.infos {
-  grid-column: 2;
-  display: flex;
-  flex-direction: column;
-}
-
-.nome {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.total {
-  margin-top: auto;
-  margin-left: auto;
-}
-
-.total span {
-  font-weight: bold;
 }

@@ -1,0 +1,50 @@
+.form button {
+  margin-top: 2rem;
+}
+
+.inputField {
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+.inputField label {
+  padding: 0 .5rem;
+  background: var(--bg);
+  position: absolute;
+  left: .6rem;
+  top: -.6rem;
+  text-transform: capitalize;
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+}
+
+.inputField input {
+  padding: .7rem;
+  border-radius: .2rem;
+  background: var(--bg);
+  border: 1px solid var(--borda);
+  color: var(--texto-1);
+  max-width: 25rem;
+  width: 100%;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.03);
+}
+
+.inputField input:focus {
+  border-color: var(--texto-1)
+}
+
+.inputField input.invalid {
+  border: 1px solid rgb(209, 72, 54);
+  background: rgba(209, 72, 54, 0.08);
+
+}
+
+.inputField input.valid {
+  border: 1px solid rgb(41, 155, 102);
+  background: rgba(41, 155, 102, 0.08);
+}
+
+.alert {
+  color: rgb(209, 72, 54);
+  margin-top: .2rem;
+}

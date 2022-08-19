@@ -1,11 +1,12 @@
 .header {
-  height: 6rem;
+  height: 4.5rem;
   border-bottom: 1px solid var(--borda);
   position: fixed;
   background: var(--bg);
   width: 100%;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.05);
   z-index: 10;
+
 }
 
 .container {

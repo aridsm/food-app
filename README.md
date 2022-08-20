@@ -1,70 +1,19 @@
-# Getting Started with Create React App
+# FoodApp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto de um restaurante fast food com 4 rotas navegaveis além de uma rota 404. Feito com React js, React Redux, Redux toolkit, React Router e CSS. Prototipagem feita pelo Figma.
 
-## Available Scripts
+## Rotas
 
-In the project directory, you can run:
+1. Home: pagina principal do website com link para o cardapio.
+2. Cardapio: pagina com os itens disponiveis, filtragem por categorias e modal para adicionar item ao carrinho.
+3. Finalizar compra: pagina com formulario de endereço com validaçao e fetch de endereço por meio do CEP. 
+4. Compra finalizada: pagina mostrando os itens comprados.
+5. Rota 404: pagina caso tente navegar para uma rota inexistente ou uma rota indisponivel no momento (Finalizar compra ou compra finalizada).
 
-### `npm start`
+### Plus
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+O projeto conta também com o modal de cada item do cardapio, possibilidade de adicionar ao carrinho, retirar produto do carrinho e esvaziar lista. Além disso, possui um alerta para as açoes dos usuarios (adicionar produto ao carrinho, retirar produto, formulario invalido...).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Objetivo
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+O projeto teve como principal objetivo o emprego do Redux para criaçao de estados globais (carrinho e alertas).

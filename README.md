@@ -18,4 +18,4 @@ O projeto conta também com o modal de cada item do cardápio, possibilidade de 
 
 O projeto teve como principal objetivo o emprego do Redux para criação de estados globais (carrinho e alertas).
 
-Acesse: aridsm.github.io/food-app/
+Acesse: https://aridsm.github.io/food-app/

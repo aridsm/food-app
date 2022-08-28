@@ -33,7 +33,7 @@ const ModalItemCardapio = ({ item, onClose }) => {
       img: item.img,
       nome: item.nome
     }))
-    dispatch(alertVisibility('Item adicionado ao carrinho.', 'ok'))
+    dispatch(alertVisibility(`Item "${item.nome}" (${quantidadeItem}) adicionado ao carrinho.`, 'ok'))
   }
 
   return (

@@ -55,7 +55,7 @@ const FormAddress = ({ compraFinalizada }) => {
           .then(r => r.json())
           .then(enderecoData => {
             if (enderecoData.city !== 'Rio de Janeiro') {
-              error = 'Este cep nao faz parte da cidade Rio de Janeiro'
+              error = 'Este cep não faz parte da cidade Rio de Janeiro'
               return;
             }
             setStreet(enderecoData.street);
@@ -87,7 +87,7 @@ const FormAddress = ({ compraFinalizada }) => {
       compraFinalizada()
       navigate('/finalizado', { state: { nome, cartState } })
     } else { 
-      dispatch(alertVisibility('Preencha o formulario corretamente.', 'bad'));
+      dispatch(alertVisibility('Preencha o formulário corretamente.', 'bad'));
     }
   }
 

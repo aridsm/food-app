@@ -21,7 +21,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/food-app/">
       <Alert />
       <Header />
       <main className="container">

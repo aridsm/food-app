@@ -16,7 +16,7 @@ function App() {
 
   const [compraFoiFinalizada, setCompraFoiFinalizada] = useState(false)
 
-  const finalizarCompra = () => {
+  const compraFinalizada = () => {
     setCompraFoiFinalizada(true)
   }
 
@@ -28,7 +28,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/cardapio' element={<Cardapio />} />
-          {itensCarrinho.length && <Route path='/finalizar-compra' element={<Finalizar finalizarCompra={finalizarCompra} />} />}
+          {itensCarrinho.length && <Route path='/finalizar-compra' element={<Finalizar compraFinalizada={compraFinalizada} />} />}
           {compraFoiFinalizada && <Route path='/finalizado' element={<PedidoFinalizado />} />}
           <Route path='*' element={<NotFound />} />
         </Routes>

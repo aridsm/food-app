@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/food-app/static/css/main.2641c994.css",
-    "main.js": "/food-app/static/js/main.b4a75f36.js",
+    "main.css": "/food-app/static/css/main.8b8e14fe.css",
+    "main.js": "/food-app/static/js/main.dbbd52ea.js",
     "static/media/imghome.jpg": "/food-app/static/media/imghome.f10740815436ef61b25b.jpg",
     "static/media/pizza2.webp": "/food-app/static/media/pizza2.094c4014d80dce954b43.webp",
     "static/media/pizza3.webp": "/food-app/static/media/pizza3.37d818cf31df7d98b923.webp",
@@ -24,16 +24,16 @@
     "static/media/beb1.webp": "/food-app/static/media/beb1.ef4a9f9e27a3a12c4ce6.webp",
     "static/media/logo.svg": "/food-app/static/media/logo.f84fc7d96df4e76e0d85a13d4c4ca31d.svg",
     "index.html": "/food-app/index.html",
-    "static/media/cart.svg": "/food-app/static/media/cart.6828a7e1ac9fbafbef6699e2cc2fc37a.svg",
+    "static/media/cart.svg": "/food-app/static/media/cart.6b077823f1f31070ed6a592f079c81d0.svg",
     "static/media/stripe.svg": "/food-app/static/media/stripe.bb9d9d89d39371d06930.svg",
-    "static/media/menu.svg": "/food-app/static/media/menu.f98b98b4905b36b844a65327ecaadc32.svg",
-    "static/media/close.svg": "/food-app/static/media/close.85f9f2a1f603d5a966a44474678a7981.svg",
-    "static/media/zig.svg": "/food-app/static/media/zig.d8a16d923672f764fc59.svg",
-    "main.2641c994.css.map": "/food-app/static/css/main.2641c994.css.map",
-    "main.b4a75f36.js.map": "/food-app/static/js/main.b4a75f36.js.map"
+    "static/media/menu.svg": "/food-app/static/media/menu.b8fa93e0a1485bc1cc22740a8ca4805d.svg",
+    "static/media/close.svg": "/food-app/static/media/close.bf336e028987a73240cf8ed5e6c600bd.svg",
+    "static/media/zig.svg": "/food-app/static/media/zig.2e5a651f21e780265fba.svg",
+    "main.8b8e14fe.css.map": "/food-app/static/css/main.8b8e14fe.css.map",
+    "main.dbbd52ea.js.map": "/food-app/static/js/main.dbbd52ea.js.map"
   },
   "entrypoints": [
-    "static/css/main.2641c994.css",
-    "static/js/main.b4a75f36.js"
+    "static/css/main.8b8e14fe.css",
+    "static/js/main.dbbd52ea.js"
   ]
 }

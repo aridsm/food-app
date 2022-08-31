@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Alert from "./components/Alert";
 import Home from "./rotas/Home";
@@ -21,7 +21,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter basename="/food-app/">
+    <HashRouter basename="/food-app/">
       <Alert />
       <Header />
       <main className="container">
@@ -34,7 +34,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

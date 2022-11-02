@@ -2,6 +2,8 @@
 
 Projeto de um restaurante fast food com 4 rotas navegáveis além de uma rota 404. Feito com React js, React Redux, Redux toolkit, React Router e CSS. Prototipagem feita pelo Figma.
 
+![página catálogo](https://github.com/aridsm/food-app/blob/master/public/FoodApp.png)
+
 ## Rotas
 
 1. Home: página principal do website com link para o cardápio.

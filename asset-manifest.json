@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/food-app/static/css/main.8b8e14fe.css",
-    "main.js": "/food-app/static/js/main.74eef5d3.js",
+    "main.css": "/food-app/static/css/main.503f0c15.css",
+    "main.js": "/food-app/static/js/main.dbe64d64.js",
     "static/media/imghome.jpg": "/food-app/static/media/imghome.f10740815436ef61b25b.jpg",
     "static/media/pizza2.webp": "/food-app/static/media/pizza2.094c4014d80dce954b43.webp",
     "static/media/pizza3.webp": "/food-app/static/media/pizza3.37d818cf31df7d98b923.webp",
@@ -29,11 +29,11 @@
     "static/media/menu.svg": "/food-app/static/media/menu.b8fa93e0a1485bc1cc22740a8ca4805d.svg",
     "static/media/close.svg": "/food-app/static/media/close.bf336e028987a73240cf8ed5e6c600bd.svg",
     "static/media/zig.svg": "/food-app/static/media/zig.2e5a651f21e780265fba.svg",
-    "main.8b8e14fe.css.map": "/food-app/static/css/main.8b8e14fe.css.map",
-    "main.74eef5d3.js.map": "/food-app/static/js/main.74eef5d3.js.map"
+    "main.503f0c15.css.map": "/food-app/static/css/main.503f0c15.css.map",
+    "main.dbe64d64.js.map": "/food-app/static/js/main.dbe64d64.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b8e14fe.css",
-    "static/js/main.74eef5d3.js"
+    "static/css/main.503f0c15.css",
+    "static/js/main.dbe64d64.js"
   ]
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./Home.module.css";
+import { NavLink } from "react-router-dom";
 import imgHome from "../assets/imghome.jpg";
 
 const Home = () => {
@@ -15,12 +16,12 @@ const Home = () => {
             Comida rápida e de <br /> qualidade!
           </p>
 
-          <a
-            href="/food-app/cardapio"
+          <NavLink
+            to="/cardapio"
             className={`btn-style ${classes.linkCardapio}`}
           >
             Conheça o Cardápio
-          </a>
+          </NavLink>
         </div>
         <div className={classes.img}>
           <img
